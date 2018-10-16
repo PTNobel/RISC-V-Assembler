@@ -1,0 +1,10 @@
+register = @{ "x"~'0'..'32' | "zero" | "sp" | "tp" }
+r_instruction = @{"add" | "sub"}
+i_instruction = @{"addi"}
+immediate = ('1'..'9')+
+
+instruction = {
+    (r_instruction ~ register ~ register ~ register)
+    (r_instruction ~ register register immediate)
+}
+

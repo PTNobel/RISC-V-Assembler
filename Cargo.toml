@@ -1,0 +1,8 @@
+[package]
+name = "riscv_assembler"
+version = "0.1.0"
+authors = ["Parth Nobel <parthnobel@berkeley.edu>"]
+
+[dependencies]
+"pest" = "2.0"
+"pest_derive" = "2.0"
