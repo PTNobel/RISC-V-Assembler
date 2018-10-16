@@ -1,10 +1,24 @@
-register = @{ "x"~'0'..'32' | "zero" | "sp" | "tp" }
+register_zero = @{
+    "zero" | "x0"
+}
+register_stack_pointer = @{
+    "sp" | "x2"
+}
+
+register_temporaries = @{
+    "x" ~ '5'..'7' |
+    "t" ~ '0'..'6'
+}
+
+register = @{
+    register_zero |
+    "tp"
+}
 r_instruction = @{"add" | "sub"}
 i_instruction = @{"addi"}
-immediate = ('1'..'9')+
+immediate = {'1'..'9'+}
 
 instruction = {
     (r_instruction ~ register ~ register ~ register)
-    (r_instruction ~ register register immediate)
 }
 
