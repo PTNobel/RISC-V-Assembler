@@ -3,7 +3,6 @@
 This is a solid work in progress.
 
 TODO:
-
 * Debug existing code
 * Add support for other instructions types
 * Finish the pest grammar
